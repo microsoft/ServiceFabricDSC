@@ -1,5 +1,8 @@
 function Test-SFPendingReboot
 {
+    [CmdletBinding()]
+    [OutputType([System.Boolean])]
+
     # The list of registry keys that will be used to determine if a reboot is required
     $rebootRegistryKeys = @{
         ComponentBasedServicing = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\'
@@ -99,5 +102,5 @@ function Test-SFPendingReboot
         RebootRequired = $rebootRequired
     }
 
-    return $pendingRebootState
+    return $pendingRebootState.RebootRequired
 }
