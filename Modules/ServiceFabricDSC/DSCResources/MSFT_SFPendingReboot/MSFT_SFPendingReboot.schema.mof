@@ -1,5 +1,0 @@
-[ClassVersion("1.0.0.0"), FriendlyName("SFPendingReboot")]
-class MSFT_SFPendingReboot : OMI_BaseResource
-{
-    [Key, Description("The name of the Service Fabric node.")] string NodeName;
-};
